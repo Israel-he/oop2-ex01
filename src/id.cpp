@@ -7,8 +7,7 @@ id::id()
 
 SquareMatrix id::action(SquareMatrix mat)
 {
-	return mat;
-
+    return mat;
 }
 
 std::string id::getName()

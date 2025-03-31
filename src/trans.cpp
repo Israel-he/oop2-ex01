@@ -15,10 +15,8 @@ SquareMatrix trans::action(SquareMatrix mat)
 	{
 		for (int j = 0; j < mat.getSize(); j++)
 		{
-		
 			mat2(j,i) = mat(i, j);
 		}
-		 
 	}
 	return mat2;
 }

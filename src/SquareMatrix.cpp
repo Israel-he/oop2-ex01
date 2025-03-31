@@ -72,6 +72,19 @@ SquareMatrix SquareMatrix::operator+(const SquareMatrix& other) const
 	}
 	return result;
 }
+//-----------------------------------------------------------
+SquareMatrix SquareMatrix::operator-(const SquareMatrix& other) const
+{
+	SquareMatrix result(m_sizeMat);
+	for (int i = 0; i < m_matrix.size(); i++)
+	{
+		for (int j = 0; j < m_matrix.size(); j++)
+		{
+			result.m_matrix[i][j] = m_matrix[i][j] - other.m_matrix[i][j];
+		}
+	}
+	return result;
+}
 
 //-----------------------------------------------------------
 

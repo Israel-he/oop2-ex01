@@ -1,8 +1,9 @@
 #include "scal.h"
 
 scal::scal(int scalar)
-	:m_name("scal"), m_scalar(scalar)
+	: m_scalar(scalar)
 {
+	m_name = "scal " + std::to_string(m_scalar);
 }
 //----------------------------------------------------
 SquareMatrix scal::action(SquareMatrix mat)

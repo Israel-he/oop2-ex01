@@ -8,22 +8,21 @@ evaluate::evaluate()
 
  SquareMatrix evaluate::createMatrix()
 {
-	std::cout << "Enter the size of the matrix: \n";
-	std::cin >> m_sizeMat;
+	 std::cout << "kk\n";
+
+	std::cin >> m_sizeMat;//???????????????
 	SquareMatrix mat(m_sizeMat);
 	std::cin >> mat;
-	std::cout << mat;
+	std::cout << mat<<"\n";
 	return mat;
 }
-
+ //-----------------------------------------------------
 void evaluate::getFunction(functions* func)
 {
-	
-	std::cout<<func->action(createMatrix());
+	std::cout<<func->action(createMatrix())<<"\n";
 }
 
-
-
+//----------------------------------------------------------
 void evaluate::print()
 {
 }

@@ -12,7 +12,10 @@ public:
 
 	int operator()(int i, int j) const;
 	int& operator()(int i, int j);
+
     SquareMatrix operator+(const SquareMatrix& mat1) const;
+	SquareMatrix operator-(const SquareMatrix& mat1) const;
+
 
 	void resize();
 	int getSize() const;
