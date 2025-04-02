@@ -4,27 +4,41 @@
 #include <vector>
 
 trans::trans()
-	:m_name("trans")
+	:functions("trans", 1)
 {
 }
-//-----------------------------------------------------
-SquareMatrix trans::action(SquareMatrix mat)
+
+SquareMatrix trans::action(std::vector<SquareMatrix> func)
 {
-	SquareMatrix mat2(mat.getSize());
-	for (int i = 0; i < mat.getSize(); i++)
+	SquareMatrix mat2(func[0].getSize());
+	for (int i = 0; i < func[0].getSize(); i++)
 	{
-		for (int j = 0; j < mat.getSize(); j++)
+		for (int j = 0; j < func[0].getSize(); j++)
 		{
-			mat2(j,i) = mat(i, j);
+			mat2(j, i) = func[0](i, j);
 		}
 	}
 	return mat2;
 }
 
 //-----------------------------------------------------
-std::string trans::getName()
+ 
+
+
+SquareMatrix trans::action(int size)
 {
-	return m_name;
+	 
+	std::cout << "Enter a " << size << " x " << size << "matrix:" << std::endl;
+	SquareMatrix mat1(size);
+	SquareMatrix mat2(size);
+	std::cin >> mat1;
+	for (int i = 0; i < mat1.getSize(); i++)
+	{
+		for (int j = 0; j < mat1.getSize(); j++)
+		{
+			mat2(j, i) = mat1(i, j);
+		}
+	}
+	return mat2;
 }
-
-
+ 

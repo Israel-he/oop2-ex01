@@ -1,27 +1,36 @@
 #include "scal.h"
 
 scal::scal(int scalar)
-	: m_scalar(scalar)
+	: functions("scal" + std::to_string(scalar), 1), m_scalar(scalar)
 {
-	m_name = "scal " + std::to_string(m_scalar);
+	 
 }
-//----------------------------------------------------
-SquareMatrix scal::action(SquareMatrix mat)
+SquareMatrix scal::action(int)
 {
-	SquareMatrix mat2(mat.getSize());
-
-	for (int i = 0; i < mat.getSize(); i++)
-	{
-		for (int j = 0; j < mat.getSize(); j++)
-		{
-			mat2(i, j) = mat(i, j) * m_scalar;
-		}
-	}
-	return mat2;
+	return SquareMatrix();
 }
-//-----------------------------------------------------	
+SquareMatrix scal::action(std::vector<SquareMatrix> func)
+{
+	return SquareMatrix();
+}
 std::string scal::getName()
 {
-	return m_name;
+	return std::string();
 }
+//----------------------------------------------------
+//SquareMatrix scal::action(SquareMatrix mat)
+//{
+//	SquareMatrix mat2(mat.getSize());
+//
+//	for (int i = 0; i < mat.getSize(); i++)
+//	{
+//		for (int j = 0; j < mat.getSize(); j++)
+//		{
+//			mat2(i, j) = mat(i, j) * m_scalar;
+//		}
+//	}
+//	return mat2;
+//}
+//-----------------------------------------------------	
+ 
 //-----------------------------------------------------

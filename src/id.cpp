@@ -1,16 +1,22 @@
 #include "id.h"
 
 id::id()
-	:m_name("id")
+	:functions("id", 1)
 {
 }
 
-SquareMatrix id::action(SquareMatrix mat)
+SquareMatrix id::action(int size)
 {
-    return mat;
+	SquareMatrix mat(size);
+	std::cin >> mat;
+	return mat;
 }
 
-std::string id::getName()
+SquareMatrix id::action(std::vector<SquareMatrix> func)
 {
-	return  m_name;
+	return SquareMatrix();
 }
+
+ 
+
+ 

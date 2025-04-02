@@ -29,6 +29,6 @@ private:
 	int m_index;
 	int m_sizeMat;
 	print m_printInstructor;
-
+	 
 	int m_vecSize;
 };

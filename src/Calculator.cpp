@@ -28,7 +28,9 @@ void Calculator::chooseFunction()
 		{
 			//std::cout << "\nEnter the index of the function you want to evaluate: \n";
 			std::cin >> m_index;
-			m_eval.getFunction(m_func[m_index].get());
+			std::cout << "Enter the size of the matrix: \n";
+			std::cin >> m_sizeMat;
+			m_eval.getFunction(m_func[m_index].get(), m_sizeMat);
 		}
 		else if (m_funcName == "scal")
 		{

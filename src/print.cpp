@@ -1,6 +1,7 @@
  #include "print.h"
 
 print::print()
+	: m_func(" " ,0)
 {
 }
 

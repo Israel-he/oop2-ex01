@@ -8,11 +8,12 @@ class scal : public functions
 public:
 	scal(int scalar);
 
-	virtual	SquareMatrix action(SquareMatrix mat) override;
+	virtual SquareMatrix action(int);
+	virtual SquareMatrix action(std::vector<SquareMatrix> func);
 	virtual std::string getName() override;
 
  
 private:
 	int m_scalar;
-	std::string m_name;
+ 
 };

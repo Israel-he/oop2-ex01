@@ -5,7 +5,7 @@
 class SquareMatrix
 {
 public:
-	SquareMatrix(int m_sizeMat);
+	SquareMatrix(int m_sizeMat = 0);
 
 	friend std::istream& operator>>(std::istream& is, SquareMatrix& matrix);
 	friend std::ostream& operator<<(std::ostream& os, const SquareMatrix& matrix);

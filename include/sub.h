@@ -6,20 +6,20 @@
 #include "evaluate.h"
 #include "functional"
 #include "print.h"	
+#include "functions.h"
 class sub : public functions
 {
 public:
 
 	sub(std::shared_ptr<functions> func1, std::shared_ptr<functions> func2);
-    virtual	SquareMatrix action(SquareMatrix mat) override;
+   // virtual	SquareMatrix action(SquareMatrix mat) override;
 	std::string getName();
 
-
-
+	virtual SquareMatrix action(int);
+	virtual SquareMatrix action(std::vector<SquareMatrix> func);
+	std::string createName(std::shared_ptr<functions> m_func1, std::shared_ptr<functions> m_func2);
 
 private:
-	/*functions* m_func1;
-	functions* m_func2;*/
 	evaluate m_eval;
 	std::shared_ptr<functions> m_func1;
 	std::shared_ptr<functions> m_func2;

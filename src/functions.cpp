@@ -1,19 +1,36 @@
 #include "functions.h"
 
-functions::functions()
-	 
+functions::functions(std::string name, int numOfFunc)
+	:m_name(name),m_numFoFunc(numOfFunc)
+ 
 {
 }
+SquareMatrix functions::action(int)
+{
+	return SquareMatrix{};
+}
+
 //-----------------------------------------------------
-SquareMatrix functions::action(SquareMatrix mat)
+
+SquareMatrix functions::action(std::vector<SquareMatrix> func)
 {
-	return mat;
-}
+	 return SquareMatrix{}; 
+};
+
+
+ 
 //-----------------------------------------------------
 std::string functions::getName()
 {
-	return std::string();
+	return m_name;
 }
+
+int functions::getNumOfFunc() const
+{
+	return m_numFoFunc;
+}
+
+ 
 
 //-----------------------------------------------------
  
